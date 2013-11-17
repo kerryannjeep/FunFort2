@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <h1>
-  <%= @child.first_name %>' Fort!
+  <%= @child.first_name %>'s Fort!
 
 
-<h2>Friends</h2>
+<h3>Friends</h3>
 <ul>
   <% for friendship in @child.friendships %>
       <li>
@@ -17,7 +17,7 @@
 
 
 
-<h2>Sent Messages</h2>
+<h3>Sent Messages</h3>
 <ul>
   <% for message in @child.messages %>
       <li>
@@ -27,7 +27,7 @@
 </ul>
 <%= link_to "Send Message", new_message_path %>
 
-<h2>Received Messages</h2>
+<h3>Received Messages</h3>
 <ul>
   <% for message in @child.received_messages %>
       <li>
