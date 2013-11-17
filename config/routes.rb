@@ -8,6 +8,7 @@ FunFort::Application.routes.draw do
   get 'approvals/:id/confirm' => 'approvals#confirm'
   get 'approvals/:id/reject' => 'approvals#reject'
   get 'approvals/:id/confirm_receipt' => 'approvals#confirm_receipt'
+  get 'approvals/thanks', to: 'approvals#thanks'
 
   resources :children
   resources :parents

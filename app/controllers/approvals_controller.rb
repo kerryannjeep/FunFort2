@@ -1,12 +1,17 @@
 class ApprovalsController < ApplicationController
 
+  def thanks
+
+  end
+
+  end
   def confirm
     @message = Message.find(params[:id])
     @message.parent_approval = true
     respond_to do |format|
       if @message.save
         MessageMailer.receive_approval_email(@message).deliver
-        format.html { redirect_to @message, notice: 'Message was successfully updated.' }
+        format.html { render action: 'thanks', notice: 'Message Approved.' }
         format.json { head :no_content }
       else
         format.html { render action: current_user }
@@ -20,7 +25,7 @@ class ApprovalsController < ApplicationController
     @message.friend_parent_approval = true
     respond_to do |format|
       if @message.save
-        format.html { redirect_to @message, notice: 'Message was successfully updated.' }
+        format.html { render action: 'thanks', notice: 'Message Approved.' }
         format.json { head :no_content }
       else
         format.html { render action: current_user }
@@ -33,7 +38,7 @@ class ApprovalsController < ApplicationController
     @message = Message.find(params[:id])
     respond_to do |format|
       if @message.delete
-        format.html { redirect_to @message, notice: 'Message was deleted updated.' }
+        format.html { render action: "thanks", notice: 'Message Rejected.' }
         format.json { head :no_content }
       else
         format.html { render action: current_user }
