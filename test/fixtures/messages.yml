@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  friendship_id: 1
+  data: MyString
+  parent_approval: false
+  friend_parent_approval: false
+  expiry_date: 2013-11-17 11:50:41
+
+two:
+  friendship_id: 1
+  data: MyString
+  parent_approval: false
+  friend_parent_approval: false
+  expiry_date: 2013-11-17 11:50:41

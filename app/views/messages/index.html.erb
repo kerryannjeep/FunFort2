@@ -1,0 +1,35 @@
+<h1>Listing messages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Friendship</th>
+      <th>Data</th>
+      <th>Parent approval</th>
+      <th>Friend parent approval</th>
+      <th>Expiry date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @messages.each do |message| %>
+      <tr>
+        <td><%= message.friendship_id %></td>
+        <td><%= message.data %></td>
+        <td><%= message.parent_approval %></td>
+        <td><%= message.friend_parent_approval %></td>
+        <td><%= message.expiry_date %></td>
+        <td><%= link_to 'Show', message %></td>
+        <td><%= link_to 'Edit', edit_message_path(message) %></td>
+        <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Message', new_message_path %>

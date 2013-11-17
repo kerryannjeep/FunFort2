@@ -1,0 +1,23 @@
+<h1>Add Friend</h1>
+
+<%= form_for @friendship do |f| %>
+    <% if @friendship.errors.any? %>
+        <div class="error_messages">
+          <h2>Form is invalid</h2>
+          <ul>
+            <% @friends.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :friend_id %><br />
+      <%= f.text_field :friend_id %>
+    </div>
+
+
+    <div class="actions"><%= f.submit "Sign Up" %></div>
+<% end %>
+

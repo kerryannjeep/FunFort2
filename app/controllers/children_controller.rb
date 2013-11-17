@@ -1,11 +1,6 @@
 class ChildrenController < ApplicationController
   before_action :set_child, only: [:show, :edit, :update, :destroy]
-
-  # GET /children
-  # GET /children.json
-  def index
-    @children = Child.all
-  end
+  before_filter :authorize
 
   # GET /children/1
   # GET /children/1.json

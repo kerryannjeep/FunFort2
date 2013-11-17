@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131117014033) do
+ActiveRecord::Schema.define(version: 20131117180325) do
 
   create_table "children", force: true do |t|
     t.string   "first_name"
@@ -22,12 +22,32 @@ ActiveRecord::Schema.define(version: 20131117014033) do
 
   add_index "children", ["parent_id"], name: "index_children_on_parent_id"
 
+  create_table "friendships", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "child_id"
+    t.integer  "friend_id"
+  end
+
+  create_table "messages", force: true do |t|
+    t.integer  "friendship_id"
+    t.string   "data"
+    t.boolean  "parent_approval"
+    t.boolean  "friend_parent_approval"
+    t.datetime "expiry_date"
+    t.integer  "child_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "friend_id"
+  end
+
   create_table "parents", force: true do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "password_digest"
   end
 
 end
