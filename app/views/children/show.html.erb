@@ -32,7 +32,7 @@
 <ul>
   <% for message in @child.received_messages %>
       <li>
-        To: <%= message.friendship.friend_name %><br/>Message: <%= message.data %>
+        <b>From:</b> <%= message.child.first_name %>, <b>Message:</b> <%= message.data %>
       </li>
   <% end %>
 </ul>
