@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+<h1> <%= @message.child.first_name %> sent the message "<%= @message.data %>" to  <%= @message.friend.first_name %>. </h1>
+<p>
+  Click here to approve this message: <a href="<%= url_for(:controller => 'approvals', :action => 'confirm_receipt', :id => @message.id, :only_path => false) %>">Approve</a>
+</p>
+<p>
+  Click here to reject this message: <a href="<%=  url_for(:controller => 'approvals', :action => 'reject', :id => @message.id, :only_path => false) %>">Reject</a>
+</p>
+<p>
+  This message was approved by <%= @message.child.first_name %>'s parent, <%= @message.child.parent.name %>.  You can contact <%= @message.child.first_name %>'s parent at <%= @message.child.parent.email %>.
+</p>
+<p>
+  Thank you and have a nice day!
+</p>
+</body>
+</html>

@@ -7,6 +7,7 @@ FunFort::Application.routes.draw do
   get 'logout', to: 'sessions#destroy', as: 'logout'
   get 'approvals/:id/confirm' => 'approvals#confirm'
   get 'approvals/:id/reject' => 'approvals#reject'
+  get 'approvals/:id/confirm_receipt' => 'approvals#confirm_receipt'
 
   resources :children
   resources :parents
