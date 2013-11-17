@@ -1,10 +1,8 @@
 class ApprovalsController < ApplicationController
 
   def thanks
-
   end
 
-  end
   def confirm
     @message = Message.find(params[:id])
     @message.parent_approval = true
