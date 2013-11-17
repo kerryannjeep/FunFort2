@@ -5,6 +5,7 @@ class ApprovalsController < ApplicationController
     @message.parent_approval = true
     respond_to do |format|
       if @message.save
+        MessageMailer.receive_approval_email(@message).deliver
         format.html { redirect_to @message, notice: 'Message was successfully updated.' }
         format.json { head :no_content }
       else
