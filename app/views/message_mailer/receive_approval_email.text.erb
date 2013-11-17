@@ -1,7 +1,7 @@
 <%= @message.child.first_name %> sent the message "<%= @message.data %>" to  <%= @message.friend.first_name %>.
 
-Visit this link to approve this message:  <a href="<%= url_for(:controller => 'approvals', :action => 'confirm_receipt', :id => @message.id, :only_path => false) %>">Approve</a>
-Visit this link to reject this message: <a href="<%= url_for(:controller => 'approvals', :action => 'reject', :id => @message.id, :only_path => false)  %>">Reject</a>
+Visit this link to approve this message:  <%= url_for(:controller => 'approvals', :action => 'confirm_receipt', :id => @message.id, :only_path => false) %>
+Visit this link to reject this message: <%= url_for(:controller => 'approvals', :action => 'reject', :id => @message.id, :only_path => false)  %>
 
 
 This message was approved by <%= @message.child.first_name %>'s parent, <%= @message.child.parent.name %>.  You can contact <%= @message.child.parent.first_name %> at <%= @message.child.parent.email %>.
