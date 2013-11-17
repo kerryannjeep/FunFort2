@@ -32,7 +32,7 @@ class MessagesController < ApplicationController
     respond_to do |format|
       if @message.save
         MessageMailer.approval_email(@message).deliver
-        format.html { redirect_to current_user, notice: 'Message was successfully created.' }
+        format.html { redirect_to current_child, notice: 'Message was successfully created.' }
         format.json { render action: 'show', status: :created, location: @message }
       else
         format.html { render action: 'new' }
