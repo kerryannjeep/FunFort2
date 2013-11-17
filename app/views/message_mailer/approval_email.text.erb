@@ -1,6 +1,6 @@
 <%= @message.child.first_name %> sent the message "<%= @message.data %>" to  <%= @message.friend.first_name %>.
 
-Visit this link to approve this message: <%= @approve_url %>
-Visit this link to reject this message: <%= @approve_url %>
+Visit this link to approve this message: <%= url_for :controller => 'approvals', :action => 'approve', :id => @message.id  %>
+Visit this link to reject this message: <%= url_for :controller => 'approvals', :action => 'reject', :id => @message.id  %>
 
 Thank you and have a nice day!

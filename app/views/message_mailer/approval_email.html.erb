@@ -6,10 +6,10 @@
 <body>
 <h1> <%= @message.child.first_name %> sent the message "<%= @message.data %>" to  <%= @message.friend.first_name %> </h1>
 <p>
-  Click here to approve this message: <a href="<%= @approve_url %>">Approve</a>
+  Click here to approve this message: <a href="<%= url_for :controller => 'approvals', :action => 'approve', :id => @message.id %>">Approve</a>
 </p>
 <p>
-  Click here to reject this message: <a href="<%= @reject_url %>">Approve</a>
+  Click here to reject this message: <a href="<%=  url_for :controller => 'approvals', :action => 'reject', :id => @message.id %>">Reject</a>
 </p>
 <p>
   Thank you and have a nice day!
