@@ -9,6 +9,6 @@ class MessageMailer < ActionMailer::Base
 
   def receive_approval_email(message)
     @message = message
-    mail(to: @message.child.parent.email, subject: "#{@message.friend.first_name} received a message, Please review")
+    mail(to: @message.friend.parent.email, subject: "#{@message.friend.first_name} received a message, Please review")
   end
 end
