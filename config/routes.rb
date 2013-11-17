@@ -5,6 +5,8 @@ FunFort::Application.routes.draw do
   get 'signup', to: 'parents#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
+  get 'approvals/:id/confirm' => 'approvals#confirm'
+  get 'approvals/:id/reject' => 'approvals#reject'
 
   resources :children
   resources :parents

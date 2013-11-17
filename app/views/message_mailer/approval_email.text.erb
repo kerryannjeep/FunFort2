@@ -1,5 +1,6 @@
-Your child sent the following message: <%= @message.data %>
+<%= @message.child.first_name %> sent the message "<%= @message.data %>" to  <%= @message.friend.first_name %>.
 
-Click here to approve this message: <%= @url %>.
+Visit this link to approve this message: <%= @approve_url %>
+Visit this link to reject this message: <%= @approve_url %>
 
 Thank you and have a nice day!

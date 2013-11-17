@@ -4,9 +4,12 @@
   <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
 </head>
 <body>
-<h1>Your child sent the following message: <%= @message.data %></h1>
+<h1> <%= @message.child.first_name %> sent the message "<%= @message.data %>" to  <%= @message.friend.first_name %> </h1>
 <p>
-  Click here to approve this message: <%= @url %>.
+  Click here to approve this message: <a href="<%= @approve_url %>">Approve</a>
+</p>
+<p>
+  Click here to reject this message: <a href="<%= @reject_url %>">Approve</a>
 </p>
 <p>
   Thank you and have a nice day!
