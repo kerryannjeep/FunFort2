@@ -21,7 +21,8 @@
 <ul>
   <% for message in @child.messages %>
       <li>
-        To: <%= message.friendship.friend_name %>, Message: <%= message.data %>
+        <b>To:</b> <%= message.friendship.friend_name %><br/>
+        <b>Message:</b> <%= message.data %>   <br/><br/>
       </li>
   <% end %>
 </ul>
@@ -31,7 +32,7 @@
 <ul>
   <% for message in @child.received_messages %>
       <li>
-        To: <%= message.friendship.friend_name %>, Message: <%= message.data %>
+        To: <%= message.friendship.friend_name %><br/>Message: <%= message.data %>
       </li>
   <% end %>
 </ul>
