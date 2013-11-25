@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def current_child
-    @current_child ||= Parent.find(1).children.first
+    @current_child ||= Parent.find(session[:parent_id]).children.first
   end
   helper_method :current_child
 

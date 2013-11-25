@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131117180325) do
+ActiveRecord::Schema.define(version: 20131120152550) do
 
   create_table "children", force: true do |t|
     t.string   "first_name"
@@ -29,6 +29,19 @@ ActiveRecord::Schema.define(version: 20131117180325) do
     t.integer  "friend_id"
   end
 
+  create_table "invitations", force: true do |t|
+    t.integer  "child_id"
+    t.string   "secret_code"
+    t.datetime "expiry_date"
+    t.string   "status"
+    t.integer  "message_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "invitations", ["child_id"], name: "index_invitations_on_child_id"
+  add_index "invitations", ["message_id"], name: "index_invitations_on_message_id"
+
   create_table "messages", force: true do |t|
     t.integer  "friendship_id"
     t.string   "data"
@@ -39,7 +52,10 @@ ActiveRecord::Schema.define(version: 20131117180325) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "friend_id"
+    t.integer  "invitition_id"
   end
+
+  add_index "messages", ["invitition_id"], name: "index_messages_on_invitition_id"
 
   create_table "parents", force: true do |t|
     t.string   "first_name"

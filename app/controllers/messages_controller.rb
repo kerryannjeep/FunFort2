@@ -25,9 +25,7 @@ class MessagesController < ApplicationController
   # POST /messages
   # POST /messages.json
   def create
-
     @message = current_child.messages.build(message_params)
-    @message.friend_id = @message.friendship.friend.id
 
     respond_to do |format|
       if @message.save

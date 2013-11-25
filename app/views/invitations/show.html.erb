@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Child:</strong>
+  <%= @invitation.child %>
+</p>
+
+<p>
+  <strong>Secret code:</strong>
+  <%= @invitation.secret_code %>
+</p>
+
+<p>
+  <strong>Expiry date:</strong>
+  <%= @invitation.expiry_date %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @invitation.status %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @invitation.message %>
+</p>
+
+<%= link_to 'Edit', edit_invitation_path(@invitation) %> |
+<%= link_to 'Back', invitations_path %>
