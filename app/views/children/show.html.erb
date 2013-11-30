@@ -1,9 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+<head>
+  <link rel="stylesheet" type= "text/css" bref="children.css.scss"
+</head>
 <h1>
   <%= @child.first_name %>'s Fort!
-
-
+</h1>
 <h3>Friends</h3>
 <ul>
   <% for friendship in @child.friendships %>
