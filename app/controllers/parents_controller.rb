@@ -1,6 +1,6 @@
 class ParentsController < ApplicationController
-  before_action :set_parent, only: [:show, :edit, :update, :destroy]
-  before_filter :authorize, except: [:index]
+  #before_action :set_parent, only: [:show, :edit, :update, :destroy]
+  #before_filter :authorize, except: [:index]
 
   # GET /parents
   # GET /parents.json

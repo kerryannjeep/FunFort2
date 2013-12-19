@@ -11,4 +11,18 @@ class Parent < ActiveRecord::Base
   def name
     self.first_name + ' ' + self.last_name
   end
+  def parent.new_remember_token
+    SecureRandom.urlsafe_base64
+  end
+
+  def parent.encrypt(token)
+    Digest::SHA1.hexdigest(token.to_s)
+  end
+
+  private
+
+  def create_remember_token
+    self.remember_token = Parent.encrypt(Parent.new_remember_token)
+  end
+end
 end

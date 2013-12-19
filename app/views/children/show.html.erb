@@ -3,9 +3,16 @@
 <head>
   <link rel="stylesheet" type= "text/css" bref="children.css.scss"
 </head>
-<h1>
-  <%= @child.first_name %>'s Fort!
-</h1>
+<div class="row">
+  <aside class="span4">
+    <section>
+        <h1>
+          <%= @child.first_name %>'s Fort!
+          <%= gravatar_for @child %>
+        </h1>
+    </section>
+  </aside>
+</div>
 <h3>Friends</h3>
 <ul>
   <% for friendship in @child.friendships %>

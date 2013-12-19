@@ -1,7 +1,3 @@
-// Place all the styles related to the parents controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-/* forms */
 // Mixins
 @mixin rounded-box($radius: 5px) {
   -webkit-border-radius: $radius;
@@ -19,6 +15,8 @@ $header--background:          $teal;
 $header__logo--color:         $white;
 $header__logo--color--hover:  $teal;
 
+$body--background:          $teal;
+
 $footer--background:          $teal;
 $footer--color:               $white;
 $footer__nav--color:          $teal;
@@ -31,6 +29,8 @@ $feature__link--background:   $teal;
 $feature__link--color:        $white;
 $feature__link--color--hover: $white;
 
+/*header and logo*/
+
 .header {
   @include rounded-box;
   background-color: $header--background;
@@ -41,7 +41,16 @@ $feature__link--color--hover: $white;
 .header a:hover {
   color: $header__logo--color--hover;
 }
+/*background color*/
+body {
+  background-color:$body--background;
+}
 
+html {
+  overflow-y: scroll;
+}
+
+/*footer color*/
 .footer {
   @include rounded-box;
   background-color: $footer--background;
@@ -67,15 +76,4 @@ $feature__link--color--hover: $white;
 .content {
   background-color: $content--background;
   color: $content--color;
-}
-
-input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
-  width: 100%;
-  margin-bottom: 15px;
-  @include box_sizing;
-}
-
-input {
-  height: auto !important;
 }
