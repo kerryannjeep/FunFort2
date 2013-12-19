@@ -1,6 +1,6 @@
 class ParentsController < ApplicationController
-  #before_action :set_parent, only: [:show, :edit, :update, :destroy]
-  #before_filter :authorize, except: [:index]
+  before_action :set_parent, only: [:show, :edit, :update, :destroy]
+  before_filter :authorize, except: [:index]
 
   # GET /parents
   # GET /parents.json
@@ -71,5 +71,18 @@ class ParentsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def parent_params
       params.require(:parent).permit(:first_name, :last_name, :email, :password, :password_confirmation)
+    end
+     # Before filters
+
+    def signed_in_user
+      unless signed_in?
+        store_location
+        redirect_to new_url, notice: "Please sign in."
+      end
+    end
+
+    def correct_user
+      @parent = parent.find(params[:id])
+      redirect_to(root_url) unless current_parent?(@parent)
     end
 end

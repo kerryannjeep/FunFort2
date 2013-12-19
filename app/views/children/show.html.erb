@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <head>
-  <link rel="stylesheet" type= "text/css" bref="children.css.scss"
+  <link rel="stylesheet" type= "text/css" bref="application.css.scss"
 </head>
 <div class="row">
   <aside class="span4">
@@ -17,6 +17,7 @@
 <ul>
   <% for friendship in @child.friendships %>
       <li>
+        <%= gravatar_for Friend, size: 55 %>
         <%= friendship.friend.first_name %>
       </li>
   <% end %>

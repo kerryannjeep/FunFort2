@@ -1,6 +1,18 @@
-
+@import 'application.css.scss'
 
 .gravatar {
   float: left;
   margin-right: 10px;
+}
+.friend {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-top: 1px solid $white;
+    &:last-child {
+      border-bottom: 1px solid $white;
+    }
+  }
 }

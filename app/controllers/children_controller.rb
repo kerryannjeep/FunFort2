@@ -1,6 +1,6 @@
 class ChildrenController < ApplicationController
-  #before_action :set_child, only: [:show, :edit, :update, :destroy]
-  #before_filter :authorize
+  before_action :set_child, only: [:show, :edit, :update, :destroy]
+  before_filter :authorize
 
   # GET /children/1
   # GET /children/1.json
@@ -15,7 +15,9 @@ class ChildrenController < ApplicationController
   # GET /children/1/edit
   def edit
   end
-
+  def index
+    @friendships = friendships.all
+  end
   # POST /children
   # POST /children.json
   def create

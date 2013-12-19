@@ -1,9 +1,13 @@
+// Imports
+@import "compass"
+@import "compass/css3/border-radius"
 // Mixins
 @mixin rounded-box($radius: 5px) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
   border-radius: $radius;
 }
+
 
 // Descriptive Colors
 $white:        #ffffff;
@@ -30,7 +34,10 @@ $feature__link--color:        $white;
 $feature__link--color--hover: $white;
 
 /*header and logo*/
-
+.logo{
+    background:url(banner.png) no-repeat;
+    @include image-2x(banner.png", 120, 30);
+}
 .header {
   @include rounded-box;
   background-color: $header--background;

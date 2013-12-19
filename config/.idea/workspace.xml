@@ -6,13 +6,13 @@
     <ignored path=".idea/workspace.xml" />
     <file path="$PROJECT_DIR$/../../project_awesome/screen.scss" changelist="bb44f09a-e2cc-4f78-9297-6a518967321d" time="1386558192965" ignored="false" />
     <file path="$PROJECT_DIR$/../../project_awesome/screen.css" changelist="bb44f09a-e2cc-4f78-9297-6a518967321d" time="1386558206046" ignored="false" />
-    <file path="$PROJECT_DIR$/../app/assets/stylesheets/children.css.scss" changelist="bb44f09a-e2cc-4f78-9297-6a518967321d" time="1387244100430" ignored="false" />
+    <file path="$PROJECT_DIR$/../app/assets/stylesheets/children.css.scss" changelist="bb44f09a-e2cc-4f78-9297-6a518967321d" time="1387417539896" ignored="false" />
     <file path="$PROJECT_DIR$/../app/views/children/show.html.erb" changelist="bb44f09a-e2cc-4f78-9297-6a518967321d" time="1387156470288" ignored="false" />
     <file path="$PROJECT_DIR$/../app/helpers/children_helper.rb" changelist="bb44f09a-e2cc-4f78-9297-6a518967321d" time="1387156342589" ignored="false" />
     <file path="$PROJECT_DIR$/../app/assets/stylesheets/parents.css.scss" changelist="bb44f09a-e2cc-4f78-9297-6a518967321d" time="1387156764743" ignored="false" />
     <file path="$PROJECT_DIR$/../app/models/parent.rb" changelist="bb44f09a-e2cc-4f78-9297-6a518967321d" time="1387243912949" ignored="false" />
-    <file path="$PROJECT_DIR$/../app/assets/stylesheets/application.css.scss" changelist="bb44f09a-e2cc-4f78-9297-6a518967321d" time="1387244231213" ignored="false" />
-    <file path="$PROJECT_DIR$/../app/helpers/sessions_helper.rb" changelist="bb44f09a-e2cc-4f78-9297-6a518967321d" time="1387244654668" ignored="false" />
+    <file path="$PROJECT_DIR$/../app/assets/stylesheets/application.css.scss" changelist="bb44f09a-e2cc-4f78-9297-6a518967321d" time="1387417539896" ignored="false" />
+    <file path="$PROJECT_DIR$/../app/helpers/sessions_helper.rb" changelist="bb44f09a-e2cc-4f78-9297-6a518967321d" time="1387417539896" ignored="false" />
     <file path="$PROJECT_DIR$/../.idea/workspace.xml" changelist="bb44f09a-e2cc-4f78-9297-6a518967321d" time="1387332243639" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +63,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -116,6 +115,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -142,7 +142,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26855895" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27292576" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
